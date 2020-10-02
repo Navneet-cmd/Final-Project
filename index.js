@@ -11,6 +11,17 @@ today.setHours(0,0,0,0);
 
 
 
+d=new Date(document.getElementById("DueDate").value);
+duedate=d.getDate();
+mn=d.getMonth();
+mn++;
+yy=d.getFullYear();
+document.getElementById("ndt").value=dt+"/"+mn+"/"+yy
+document.getElementById("ndt").hidden=false;
+document.getElementById("dt").hidden=true;
+}
+
+
 
 userForm.addEventListener('submit', (event) => {
     event.preventDefault();
