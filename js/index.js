@@ -7,6 +7,22 @@ taskManager.render();
 const userForm = document.querySelector('#userForm');
 
 
+    
+let today = new Date();
+
+let dd = today.getDate()+1;
+ let mm = today.getMonth()+1; //January is 0!
+ let yyyy = today.getFullYear();
+
+ if(dd<10){
+ dd='0'+dd
+ } 
+ if(mm<10){
+ mm='0'+mm
+}
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("DueDate").setAttribute('min', today);
+
 userForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -15,7 +31,9 @@ userForm.addEventListener('submit', (event) => {
     const userFormAssigned  = document.querySelector('#AssignedTo');
     const userFormDueDate  = document.querySelector('#DueDate');
     //const userFormStatus = document.querySelector('#Status');
- 
+
+
+
 
     
     if (userFormName .value.length > 0 && userFormName.value.length <= 8) {
@@ -57,7 +75,7 @@ userForm.addEventListener('submit', (event) => {
     if (userFormDueDate .value.length > 0) {
         userFormDueDate .classList.add('is-valid');
         userFormDueDate .classList.remove('is-invalid');
-} 
+ } 
     else {
         userFormDueDate .classList.add('is-invalid');
         userFormDueDate .classList.remove('is-valid');
