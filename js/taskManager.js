@@ -103,7 +103,8 @@ render() {
      
         localStorage.setItem('currentId', currentId);
     }
-    load () {
+    
+    load() {
 
        if (localStorage.getItem('tasks')) {
 

@@ -93,8 +93,9 @@ userForm.addEventListener('submit', (event) => {
 
 
     taskManager.addtask(TaskName, Description, AssignedTo, DueDate);
-
+    taskManager.save();
     taskManager.render();
+   
 
   
     userFormName.value = '';
@@ -121,7 +122,9 @@ userForm.addEventListener('submit', (event) => {
             task.Status = "Done";
 
             taskManager.save();
-            taskManager.render();  
+            taskManager.render();
+           
+            
 
         }
             
