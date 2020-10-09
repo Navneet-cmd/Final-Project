@@ -13,3 +13,12 @@ ul li{ margin:10px}
     font-style: oblique;
 }
 
+#taskList {
+
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    }
+
+

@@ -1,21 +1,24 @@
 
 const createHTML = (id,TaskName, Description, AssignedTo, DueDate, Status) => `
-        
-    <ul class="list-group" id = "taskList" data-task-id=${id}>
-        <div id="accordion">
-            <div class="card" style="width: 18rem;">          
+<div class="card" style="width: 12rem;">        
+    <ul class="list-group" id = "taskList" data-task-id=${id}>     
+                  
                 <div class="card-header bg-danger text-white">                      
                         <li class="list-group-item text-dark">${TaskName} </li>        
                         <li class="list-group-item text-dark">${Description}</li>
                         <li class="list-group-item text-dark">${AssignedTo}</li>
                         <li class="list-group-item text-dark">${DueDate}</li>
-                        <span class="badge ${Status === 'TODO' ? 'badge-danger' : 'badge-success'}">${Status}</span>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary done-button ${Status === 'TODO' ? 'visible' : 'invisible'}">Mark As Done</button>  
-        <button class="btn btn-outline-danger delete-button">Delete</button>
-        </ul>  
+                        <span class="badge ${Status === 'TODO' ? 'badge-danger' : 'badge-success'}">${Status}</span>                                                  
+                </div>                           
+                    
+                
+        <button type= "button" id = "donebtn" class="btn btn-primary done-button ${Status === 'TODO' ? 'visible' : 'invisible'}">Done</button> 
+        <button id = "donebtn1"  class="btn btn-outline-danger delete-button">Delete</button> 
+       
+        </ul>    
+
+        </div>  
+           
         
 `;
 
