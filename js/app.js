@@ -130,6 +130,7 @@ document.getElementById("date-validation").setAttribute('min', today);
     document.getElementById("desSpanId").innerHTML=" ";
     document.getElementById("assiSpanId").innerHTML=" ";
     document.getElementById("dateSpanId").innerHTML=" ";
+  
 
 });
 
